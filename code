@@ -1,0 +1,35 @@
+def binarySearch(array, low, high, x): # keyword of function with arguments
+ 
+    while low <= high: # while low = or is less than high
+ 
+        mid = low + (high - low) // 2 # find middle
+ 
+        if array[mid] == x: # if middle of array = user's input
+            return mid # return middle
+ 
+        
+        elif array[mid] < x: # elif array of middle is less than x
+            low = mid + 1 # add 1 until you find the truth of x
+ 
+        else: # else
+            high = mid - 1 # take one until you find the truth of x
+ 
+
+    return -1 # return low
+ 
+ 
+
+array = [2, 3, 4, 10, 40] # number of array
+print("enter any number from the list below") # message for user
+print(array) # print all arrays
+x = int(input()) # x = user's input
+
+ 
+
+result = binarySearch(array, 0, len(array)-1, x) # call function
+ 
+if result != -1: # if result is not equal to -1
+    print("Element is present at index % d" % result) # print x was processed in result
+else: # else
+    print("Element is not present in array") # write this if the result does not match the array
+
