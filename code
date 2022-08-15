@@ -19,9 +19,10 @@ def binarySearch(array, low, high, x): # keyword of function with arguments
  
  
 
-array = [2, 3, 4, 10, 40] # number of array
+array = range(1, 101, 7) # number of array
 print("enter any number from the list below") # message for user
-print(array) # print all arrays
+for n in array: # for number in array
+  print(n) # print all arrays
 x = int(input()) # x = user's input
 
  
